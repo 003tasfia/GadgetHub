@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div> <img src="" alt="photo" width="40px">
+    <h1>GadgetHub</h1>
+    <h4>SMARTER SHOPPING</h4>
+</body>
+</div>
+<nav>
+     <ul>
+        <li><a href="admin-dashboard.html" class="active">Overview</a></li>
+        <li><a href="user-accounts.html">User accounts</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="complaints.html">Customer Complaints</a></li>
+        <li><a href="sales-report.html">Sales report</a></li>
+        <li><a href="profit-and-loss.html">Profit and Loss</a></li>
+        <li><a href="audit-logs.html">Audit logs</a></li>
+        <li><a href="manage-profile.html">Manage profile</a></li>
+     </ul>
+</nav>
+
+
+
+
+<div>
+    <img src="" alt="ProfilePic" width="30">
+    <h5>Admin</h5>
+</div>
+
+<main class="content">
+    <header><h1>Admin Dashboard</h1>
+    <p>Welcome Back</p></header>
+
+    <div class="stats" id="stats">
+        <div class="stat-card">
+            <img src="images/icon-revenue.png" alt="">
+            <p class="stat-label">Total revenue</p>
+            <h2 id="totalRevenue">৳ 8.42M</h2>
+        </div>
+        <div class="stat-card">
+            <img src="images/icon-users.png" alt="">
+            <p class="stat-label">Total users</p>
+            <h2 id="totalUsers">2,846</h2>
+        </div>
+        <div class="stat-card">
+            <img src="images/icon-products.png" alt="">
+            <p class="stat-label">Total products</p>
+            <h2 id="totalProducts">12,408</h2>
+        </div>        
+        <div class="stat-card">
+            <img src="images/icon-complaints.png" alt="">
+            <p class="stat-label">Open complaints</p>
+            <h2 id="openComplaints">1,284</h2>
+        </div>
+    </div>
+
+    <div class="panel" id="revenue-overview">
+                <h2>Revenue overview</h2>
+                <p class="panel-sub">Monthly revenue for the current year</p>
+                <div id="revenueChart"></div>
+            </div>
+
+          
+            <div class="panel" id="recent-audit">
+                <h2>Recent audit activity</h2>
+
+                <table id="auditTable">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>User</th>
+                            <th>Action</th>
+                            <th>Module</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:42 AM</td>
+                            <td>admin@gadgethub.com</td>
+                            <td>Updated user role</td>
+                            <td>User accounts</td>
+                            <td><span class="badge success">Success</span></td>
+                        </tr>
+                        <tr>
+                            <td>10:15 AM</td>
+                            <td>manager@gadgethub.com</td>
+                            <td>Edited product price</td>
+                            <td>Products</td>
+                            <td><span class="badge success">Success</span></td>
+                        </tr>
+                        <tr>
+                            <td>09:58 AM</td>
+                            <td>support@gadgethub.com</td>
+                            <td>Closed complaint</td>
+                            <td>Complaints</td>
+                            <td><span class="badge success">Success</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="view-all"><a href="audit-logs.html">View all</a></p>
+            </div>
+</main>
+</html>
