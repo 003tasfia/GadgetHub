@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../assets/salesmanstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+</head>
+<body id="salesbody">
+    <section id="left">
+    <header id="leftheader">
+        <div id="leftheaderchild">
+            <div id="imgdiv"><img id=img src="../../images/favicon-32x32.png" alt="logo"></div>
+            <div id="inline">
+                <h3 class="webname">GadgetHub</h3>
+                <p class="webname" id="smart">SMARTER SHOPPING</p>
+            </div>
+        </div>
+    </header>
+    <div>
+        <p id="role">Salesman</p>
+    </div>
+
+    <div id="navi">
+    <nav>
+        <div id="dash"><a class="navs" href="salesmandash.html">Overview</a></div>
+        <div id="inventory"><a id="select" class="navs" href="inventory.html">Inventory</a></div>
+        <div id="notification"><a class="navs" href="notification.html">Notification</a></div>
+        <div id="manage"><a class="navs" href="manageprofile.html">Manage Profile</a></div>
+    </nav>
+    </div>
+
+    <footer id="leftfooter">
+        <div id="proimgdiv"><img id="proimg" src="" alt="profilepicture"></div>
+        <div id="identity">
+            <h5 class="footele">Name</h5>
+            <p class="footele">Salesman</p>
+        </div>
+    </footer>
+    </section>
+
+    <section id="right">
+        <header id="rightheader">
+            <div>
+                <h3 id="pagename">Inventory</h3>
+                <p id="pageintro">Here's what's in the inventory</p>
+            </div>
+            <div id="signoutdiv">
+                <a id="signout" href="../../index.html">Sign out</a>
+            </div>
+        </header>
+
+        <section id="main">
+            <section id="stats">
+            <div class="statbox" id="product">
+                <div class="space"><pre>   </pre></div>
+                <div class="info">
+                    <p>Products</p>
+                </div>
+                <br>
+                <div class="info">
+                    <h3>86</h3>
+                </div>
+            </div>
+
+            <div class="statbox" id="instock">
+                <div class="space"><pre>   </pre></div>
+                <div class="info">
+                    <p>In Stock</p>
+                </div>
+                <br>
+                <div class="info">
+                    <h3>71</h3>
+                </div>
+            </div>
+
+            <div class="statbox" id="lowstock">
+                <div class="space"><pre>   </pre></div>
+                <div class="info">
+                    <p>Low Stock</p>
+                </div>
+                <br>
+                <div class="info">
+                    <h3>8</h3>
+                </div>
+            </div>
+
+            <div class="statbox" id="outstock">
+                <div class="space"><pre>   </pre></div>
+                <div class="info">
+                    <p>Out of Stock</p>
+                </div>
+                <br>
+                <div class="info">
+                    <h3>7</h3>
+                </div>
+            </div>
+            </section>
+
+            <section id="secondmain">
+            <section id="secondsec">
+            <div id="proinven">
+                <h3>Product Inventory</h3>
+            </div>
+            <div>
+                <a id="addpro" href="add.html">Add Product</a>
+            </div>
+            </section>
+
+            <div id="form">
+                <form id="inventoryform" method="post">
+                    <div id="search">
+                    <input id="searchinput" type="search" placeholder="Search any product">
+                    </div>
+
+                    <div id="categoryalign">
+                    <label>Category:</label>
+                    <select id="category">
+                        <option>All</option>
+                        <option>Smartphone</option>
+                        <option>Laptop</option>
+                        <option>Wearables</option>
+                        <option>Audio</option>
+                    </select>
+                    </div>
+
+                    <div id="stockoption">
+                    <label>Stock:</label>
+                    <select>
+                        <option>All</option>
+                        <option>In Stock</option>
+                        <option>Low Stock</option>
+                        <option>Out of Stock</option>
+                    </select>
+                    </div>
+                </form>
+            </div>
+
+            <div id="table">
+                <table id="inventorytable">
+                    <tr class="inventorytr">
+                        <th class="inventoryth">PRODUCT</th>
+                        <th class="inventoryth">CATEGORY</th>
+                        <th class="inventoryth">UNIT PRICE</th>
+                        <th class="inventoryth">STOCK</th>
+                        <th class="inventoryth">STATUS</th>
+                        <th class="inventoryth"></th>
+                    </tr>
+                    <tr class="inventorytr">
+                        <td class="inventorytd"><b>Nova X Pro</b></td>
+                        <td class="inventorytd">Smartphone</td>
+                        <td class="inventorytd">84,990</td>
+                        <td class="inventorytd">42</td>
+                        <td class="inventorytd"><div>In Stock</div></td>
+                        <td class="inventorytd"><a href="edit.html">Edit</a><button>Delete</button></td>
+                    </tr>
+                    <tr class="inventorytr">
+                        <td class="inventorytd"><b>AeroBook 14</b></td>
+                        <td class="inventorytd">Laptop</td>
+                        <td class="inventorytd">112,000</td>
+                        <td class="inventorytd">3</td>
+                        <td class="inventorytd"><div>Low Stock</div></td>
+                        <td class="inventorytd"><a href="edit.html">Edit</a><button>Delete</button></td>
+                    </tr>
+                    <tr class="inventorytr">
+                        <td class="inventorytd"><b>Studio Buds</b></td>
+                        <td class="inventorytd">Audio</td>
+                        <td class="inventorytd">8,490</td>
+                        <td class="inventorytd">0</td>
+                        <td class="inventorytd"><div>Out of Stock</div></td>
+                        <td class="inventorytd"><a href="edit.html">Edit</a><button>Delete</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="showAll">
+                <button>Show All</button>
+            </div>
+            </section>
+        </section>
+    </section>
+</body>
+</html>

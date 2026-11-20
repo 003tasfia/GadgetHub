@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../../favicon.ico">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../assets/salesmanstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Profile</title>
+</head>
+<body id="salesbody">
+    <section id="left">
+    <header id="leftheader">
+        <div id="leftheaderchild">
+            <div id="imgdiv"><img id=img src="../../images/favicon-32x32.png" alt="logo"></div>
+            <div id="inline">
+                <h3 class="webname">GadgetHub</h3>
+                <p class="webname" id="smart">SMARTER SHOPPING</p>
+            </div>
+        </div>
+    </header>
+    <div>
+        <p id="role">Salesman</p>
+    </div>
+
+    <div id="navi">
+    <nav>
+        <div id="dash"><a class="navs" href="salesmandash.html">Overview</a></div>
+        <div id="inventory"><a class="navs" href="inventory.html">Inventory</a></div>
+        <div id="notification"><a class="navs" href="notification.html">Notification</a></div>
+        <div id="manage"><a id="select" class="navs" href="manageprofile.html">Manage Profile</a></div>
+    </nav>
+    </div>
+
+    <footer id="leftfooter">
+        <div id="proimgdiv"><img id="proimg" src="" alt="profilepicture"></div>
+        <div id="identity">
+            <h5 class="footele">Name</h5>
+            <p class="footele">Salesman</p>
+        </div>
+    </footer>
+    </section>
+
+    <section id="right">
+        <header id="rightheader">
+            <div>
+                <h3 id="pagename">Manage Profile</h3>
+                <p id="pageintro">Keep your details up-to-date</p>
+            </div>
+            <div id="signoutdiv">
+                <a id="signout" href="../../index.html">Sign out</a>
+            </div>
+        </header>
+
+        <section id="'main">
+            <section id="whitecardmanage">
+                <h4 id="cardtitle">Personal Information</h4>
+                <form id="addform" method="post">
+                    <div id="namedes">
+                        <label class="addlabel" for="fname">Full Name</label>
+                        <input class="addtext" type="text" id="fname">
+                    <div>
+                        <label class="addlabel" for="email">Email</label>
+                        <input class="addtext" type="email" id="email">
+                    </div>
+
+                    <div>
+                        <label class="addlabel" for="phoneno">Phone Number</label>
+                        <input class="addtext" type="text" id="phoneno">
+                    </div>
+                    </div>
+                    
+                    <label class="addlabel" for="productimg">Profile Picture</label>
+                    <label id="addupload-box" class="upload-box" for="image">
+                        <span id="adduploadspan">+</span>
+                        <span>
+                            <div class="upload-title">Upload product image</div>
+                            <div class="upload-note">PNG or JPG.</div>
+                        </span>
+                    </label>
+                    <input type="file" id="image" accept="image/png, image/jpeg" hidden>
+
+                    <div id="addsubmit">
+                        <input id="addsubmitbutton" type="submit" value="Save Changes">
+                    </div>
+                </form>
+            </section>
+        </section>
+    </section>
+    </div>
+</body>
+</html>

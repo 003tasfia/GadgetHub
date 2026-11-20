@@ -1,0 +1,768 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#salesbody{
+    display: flex;
+    min-height: 100vh;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+#left{
+    width: 240px;
+    background-color: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    padding: 20px 16px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#leftheader{
+    display: block;
+    padding: 10px;
+}
+
+#leftheaderchild{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#imgdiv{
+    display: flex;
+}
+
+#img{
+    height: 40px;
+    width: 40px;
+}
+
+#inline{
+    display: flex;
+    flex-direction: column;
+}
+
+.webname{
+    display: block;
+}
+
+#smart{
+    font-size: 11px;
+}
+
+#role{
+    margin: 24px 0 16px 7px;
+}
+
+#navi{
+    flex: 1;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 10px;
+}
+
+.navs{
+    display: block;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+.navs:hover{
+    background-color: #eef2ff;
+    color: blue;
+}
+
+#select{
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+#leftfooter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+    margin-top: auto;
+}
+
+#proimgdiv{
+    display: flex;
+}
+
+#proimg{
+    display: block;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: #e0e7ff;
+}
+
+#identity{
+    display: flex;
+    flex-direction: column;
+}
+
+.footele{
+    display: block;
+}
+
+#right{
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#rightheader{
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#pagename{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#pageintro{
+    font-size: 12px;
+    color: #6b7280;
+}
+
+#signout{
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#signout:hover{
+    background-color: #c7d2fe;
+}
+
+/*inventory*/
+
+#main{
+    flex: 1;
+    background-color: #e7eef9;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#stats{
+    display: flex;
+    gap: 16px;
+}
+
+.statbox{
+    background-color: #ffffff;
+    border: 3px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 15px 20px 10px 20px;
+    min-width: 150px;
+}
+
+.space{
+    margin: 2px 2px 4px 0px;
+    display: inline-block;
+    height: 20px;
+    border: 1px solid #e7eef9;
+    border-radius: 5px;
+    background-color: #e7eef9;
+}
+
+.info{
+    display: inline-block;
+}
+
+#secondmain{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#secondsec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#proinven{
+    display: block;
+}
+
+#addpro{
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#form{
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+}
+
+#inventoryform{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#search{
+    flex: 1;
+    min-width: 200px;
+    max-width: 320px;
+}
+
+#searchinput{
+    width: 100%;
+    padding: 6px 10px;
+}
+
+#categoryalign{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#stockoption{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#table{
+    width: 100%;
+    background-color: #e7eef9;
+}
+
+#inventorytable{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    color: #111827;
+}
+
+.inventoryth{
+    text-align: center;
+    padding: 14px 12px;
+    font-size: 10px;
+    font-weight: 600;
+    background-color: #e7eef9;
+    border: 1px solid #c2c4c6;
+}
+
+.inventorytd{
+    padding: 16px 12px;
+    border: 1px solid #c2c4c6;
+    text-align: center;
+}
+
+.inventorytd a{
+    color: #4f46e5;
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 14px;
+}
+
+.inventorytd button{
+    color: #ef4444;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+#showAll{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#showAll button{
+    border: none;
+    color: blue;
+}
+
+/*
+add,edit,manageprofile
+}*/
+
+[id="'main"]{
+    flex: 1;
+    background-color: #e7eef9;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#whitecard{
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 860px;
+    margin:auto;
+}
+
+#cardtitle{
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+#addform{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 4px;
+}
+
+#namedes{
+    grid-column: 1 / -1;
+}
+
+#addsubmit{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+#addform > label {
+    grid-column: 1 / -1;
+}
+
+.addlabel {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.addtext{
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #111827;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+#addtextarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.addtext:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+#addupload-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 28px 24px;
+    margin-bottom: 0;
+    background-color: #f9fafb;
+    border: 2px dashed #c7d2fe;
+    border-radius: 10px;
+    font-weight: 400;
+}
+
+#addupload-box:hover {
+    background-color: #eef2ff;
+    border-color: #4f46e5;
+}
+
+#adduploadspan{
+    font-size: 28px;
+    line-height: 1;
+    color: #4f46e5;
+}
+
+#upload-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+}
+
+#upload-note {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+#addsubmitbutton{
+    padding: 10px 22px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #ffffff;
+    background-color: #4f46e5;
+    border: none;
+    border-radius: 8px;
+}
+
+#addsubmitbutton:hover {
+    background-color: #4338ca;
+}
+
+#whitecardmanage{
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 600px;
+    margin:auto;
+}
+
+#noticollections{
+    display: flex;
+    flex-direction: column;
+}
+
+#notihead{
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.noticard{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.notiftitle{
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 12px;
+    color: #111827;
+}
+
+.notiftext{
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 10px;
+    color: #6b7280;
+}
+
+#loadmore{
+    display: flex;
+    justify-content: flex-end;
+    color: #4f46e5;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.time{
+    font-size: small;
+    color:#757677;
+}
+
+#loginbody{
+    font-family: Arial, sans-serif;
+    display: flex;              
+    min-height: 100vh;          
+}
+
+#loginleft{
+    width: 50%;
+    background-color: #b8d2fc;
+    padding: 40px;
+    height: 100vh;
+    position:sticky;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+}
+
+#logoname{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#loginname{
+    font-size: 22px;
+}
+
+#fav{
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+#bluespan{
+    color: #175ba3;
+}
+
+#explorelogin{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #545556;
+}
+
+#emptydiv{
+    width: 50px;               
+    height: 4px;
+    background-color: #4da3ff;
+    margin-bottom: 15px;
+}
+
+#loginfootp1{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#loginfootp2{
+    margin-top: 5px;
+    color: #545556;
+}
+
+#loginright{
+    width: 50%;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;    
+    align-items: center;        
+    padding: 40px;
+}
+
+#cardtitlelogin{
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #0f2a4a;
+}
+
+#cardtitleloginp{
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.emailpasslogin{
+    display: block;             
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.textpasslogin{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.textpasslogin:focus{
+    border-color: blue;
+}
+
+#rememberme{
+    font-size: 14px;
+    color: #555;
+}
+
+#forgot{
+    float: right;               
+    font-size: 14px;
+    color: #2f80ed;
+}
+
+#loginsubmit{
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #2f80ed;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#loginsubmit:hover{
+    background-color: blue;
+}
+
+#newto{
+    margin-top: 25px;
+    text-align: center;
+    color: #666;
+}
+
+#createaccount{
+    color: #2f80ed;
+    font-weight: bold;
+}
+
+.indexa{
+    text-decoration: none;
+}
+
+#indexheader{
+    display: flex;                 
+    justify-content: space-between; 
+    align-items: center;           
+    padding: 15px 40px;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+}
+
+#indexlogo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#shopname{
+    font-size: 22px;
+}
+
+#indexheadnav{
+    display: flex;
+}
+
+#indexregister{
+    padding: 8px;
+    border-radius: 15px;
+    background-color: #175ba3;
+    color: white;
+}
+
+#indexsignin{
+    padding: 8px;
+    color: black;
+    font-weight: bold;
+}
+
+.indexsection{
+    padding: 40px;
+}
+
+#section1div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #e8f0ff;
+}
+
+#newcollection{
+    color: #1a5cff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+#upgradeyour{
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+#everydayspan{
+    color: #1a5cff;
+}
+
+#discoverlatest{
+    color: #555555;
+    line-height: 1.6;
+}
+
+#emptydivbox{
+    width: 350px;
+    height: 250px;
+    background-color: #c6d6fd;
+    border-radius: 15px;
+}
+
+#sectioninsection2{
+    padding:18px 18px 0px 18px;
+    display: flex;
+    gap: 20px;
+}
+
+.indexcard{
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+.emptycardindex{
+    height: 100px;
+    background-color: #dbe4f5;
+}
+
+.categoryinfo{
+    padding: 15px;
+}
+
+#trending{
+    display: flex;
+    justify-content: space-between;
+}
+
+#trendingproducts{
+    padding: 18px;
+    display: flex;
+    gap: 100px;
+}
+
+.productinfo{
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+}
+
+.productinfoindex{
+    text-align: center;
+}

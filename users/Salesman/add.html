@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../assets/salesmanstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body id="salesbody">
+    <section id="left">
+    <header id="leftheader">
+        <div id="leftheaderchild">
+            <div id="imgdiv"><img id=img src="../../images/favicon-32x32.png" alt="logo"></div>
+            <div id="inline">
+                <h3 class="webname">GadgetHub</h3>
+                <p class="webname" id="smart">SMARTER SHOPPING</p>
+            </div>
+        </div>
+    </header>
+    <div>
+        <p id="role">Salesman</p>
+    </div>
+
+    <div id="navi">
+    <nav>
+        <div id="dash"><a class="navs" href="salesmandash.html">Overview</a></div>
+        <div id="inventory"><a id="select" class="navs" href="inventory.html">Inventory</a></div>
+        <div id="notification"><a class="navs" href="notification.html">Notification</a></div>
+        <div id="manage"><a class="navs" href="manageprofile.html">Manage Profile</a></div>
+    </nav>
+    </div>
+
+    <footer id="leftfooter">
+        <div id="proimgdiv"><img id="proimg" src="" alt="profilepicture"></div>
+        <div id="identity">
+            <h5 class="footele">Name</h5>
+            <p class="footele">Salesman</p>
+        </div>
+    </footer>
+    </section>
+
+    <section id="right">
+        <header id="rightheader">
+            <div>
+                <h3 id="pagename">Add Product</h3>
+                <p id="pageintro">Here's what there will be new in the inventory</p>
+            </div>
+            <div id="signoutdiv">
+                <a id="signout" href="../../index.html">Sign out</a>
+            </div>
+        </header>
+
+        <section id="'main">
+            <section id="whitecard">
+                <div>
+                <h3 id="cardtitle">Product Information</h3>
+                </div>
+
+                <div>
+                    <form id="addform" method="post">
+                        <div id="namedes">
+                        <label class="addlabel" for="productname">Products Name</label>
+                        <input class="addtext" type="text" id="productname">
+                        <label class="addlabel" for="description">Description</label>
+                        <textarea id="addtextarea" class="addtext" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div>
+                        <label class="addlabel" for="category">Category</label>
+                        <input class="addtext" type="text" id="category">
+                        <label class="addlabel" for="price">Selling Price (BDT)</label>
+                        <input class="addtext" type="number" id="price">
+                        <label class="addlabel" for="stockquan">Stock Quantity</label>
+                        <input class="addtext" type="number" id="stockquan">
+                        </div>
+
+                        <div>
+                            <label class="addlabel" for="brand">Brand</label>
+                            <input class="addtext" type="text" id="band">
+                            <label class="addlabel" for="warranty">Warranty</label>
+                            <input class="addtext" type="number" id="warranty">
+                        </div>
+
+                            <label class="addlabel" for="productimg">Product Image</label>
+                            <label id="addupload-box" for="image">
+                                 <span id="adduploadspan">+</span>
+                                 <span>
+                                     <div id="upload-title">Upload product image</div>
+                                     <div id="upload-note">PNG or JPG.</div>
+                                 </span>
+                            </label>
+                            <input type="file" id="image" hidden>
+
+                        <div id="addsubmit">
+                            <input id="addsubmitbutton" type="submit" value="Add Product">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </section>    
+
+</body>
+</html>
