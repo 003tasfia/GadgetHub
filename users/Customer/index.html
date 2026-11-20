@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GadgetHub | Customer dashboard</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="customer.css">
+</head>
+
+<body data-page="overview">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark"><img src="assets/favicon.ico"
+            alt="GadgetHub icon"></span><span><span class="brand-name">GadgetHub</span><br><span
+            class="brand-tagline">SMARTER SHOPPING</span></span></a>
+      <p class="nav-caption">CUSTOMER</p>
+      <nav class="side-nav" aria-label="Customer menu">
+        <a class="nav-link" data-nav="overview" href="index.html">Overview</a><a class="nav-link" data-nav="products"
+          href="products.html">Browse products</a><a class="nav-link" data-nav="cart" href="cart.html">My cart <span
+            class="cart-count"></span></a><a class="nav-link" data-nav="orders" href="orders.html">Order history</a><a
+          class="nav-link" data-nav="status" href="order-status.html">Order status</a><a class="nav-link"
+          data-nav="profile" href="profile.html">Manage profile</a><a class="nav-link" data-nav="support"
+          href="support.html">Support</a>
+      </nav>
+      <div class="account-card"><span class="avatar">N</span><span><strong
+            data-user-name>Name</strong><span>Customer</span></span></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 class="page-title">Customer dashboard</h1>
+          <p class="page-subtitle">Welcome back. Here's what's happening today.</p>
+        </div>
+      </header>
+      <div class="content">
+        <p class="intro">Your shopping activity at a glance</p>
+        <section class="stat-grid" aria-label="Shopping statistics">
+          <article class="card stat-card"><span class="placeholder-icon">ORD</span>
+            <div class="stat-label">Total orders</div>
+            <div class="stat-value" id="dashboard-total-orders">0</div><span class="stat-note" id="dashboard-total-note">No orders yet</span>
+          </article>
+          <article class="card stat-card"><span class="placeholder-icon">TRK</span>
+            <div class="stat-label">In transit</div>
+            <div class="stat-value" id="dashboard-progress-orders">0</div><span class="stat-note">In progress</span>
+          </article>
+          <article class="card stat-card"><span class="placeholder-icon">✓</span>
+            <div class="stat-label">Delivered</div>
+            <div class="stat-value" id="dashboard-delivered-orders">0</div><span class="stat-note">Last 90 days</span>
+          </article>
+          <article class="card stat-card"><span class="placeholder-icon">♥</span>
+            <div class="stat-label">Saved items</div>
+            <div class="stat-value">5</div><span class="stat-note">Your wishlist</span>
+          </article>
+        </section>
+        <div class="section-heading">
+          <h2>Recent orders</h2><a class="text-link" href="orders.html">View all orders</a>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ORDER ID</th>
+                <th>PRODUCT</th>
+                <th>ORDER DATE</th>
+                <th>STATUS</th>
+                <th>TOTAL</th>
+              </tr>
+            </thead>
+            <tbody id="dashboard-orders-body"></tbody>
+          </table>
+        </div>
+        <div class="section-heading">
+          <h2>Recommended for you</h2>
+        </div>
+        <section class="also-grid">
+          <article class="card compact-product">
+            <div class="product-image lilac"><img src="assets/products/aero.jpg" alt="MacBook Air M4 13-inch"></div>
+            <div class="product-info"><span class="product-name">MacBook Air M4 13-inch</span><span class="price">৳
+                138,499</span></div>
+            <div class="product-bottom"><a class="btn small subtle" href="products.html">View product</a></div>
+          </article>
+          <article class="card compact-product">
+            <div class="product-image mint"><img src="assets/products/sonyxm5.jpg" alt="Sony WH-1000XM5"></div>
+            <div class="product-info"><span class="product-name">Sony WH-1000XM5</span><span class="price">৳
+                42,990</span></div>
+            <div class="product-bottom"><a class="btn small subtle" href="products.html">View product</a></div>
+          </article>
+          <article class="card compact-product">
+            <div class="product-image yellow"><img src="assets/products/airpods4.jpg" alt="Apple AirPods 4"></div>
+            <div class="product-info"><span class="product-name">Apple AirPods 4</span><span class="price">৳
+                19,990</span></div>
+            <div class="product-bottom"><a class="btn small subtle" href="products.html">View product</a></div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="notice" role="status"></div>
+  <script src="customer.js"></script>
+</body>
+
+</html>

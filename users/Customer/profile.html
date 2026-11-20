@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GadgetHub | Manage profile</title>
+        <link rel="icon" href="assets/favicon.ico">
+        <link rel="stylesheet" href="customer.css">
+    </head>
+
+    <body data-page="profile">
+        <div class="app-shell">
+            <aside class="sidebar"><a class="brand" href="index.html"><span
+                        class="brand-mark"><img src="assets/favicon.ico"
+                            alt="GadgetHub icon"></span><span><span
+                            class="brand-name">GadgetHub</span><br><span
+                            class="brand-tagline">SMARTER
+                            SHOPPING</span></span></a>
+                <p class="nav-caption">CUSTOMER</p>
+                <nav class="side-nav"><a class="nav-link" data-nav="overview"
+                        href="index.html">Overview</a><a
+                        class="nav-link" data-nav="products"
+                        href="products.html">Browse products</a><a
+                        class="nav-link"
+                        data-nav="cart" href="cart.html">My cart <span
+                            class="cart-count"></span></a><a class="nav-link"
+                        data-nav="orders" href="orders.html">Order history</a><a
+                        class="nav-link" data-nav="status"
+                        href="order-status.html">Order status</a><a
+                        class="nav-link" data-nav="profile"
+                        href="profile.html">Manage profile</a><a
+                        class="nav-link" data-nav="support"
+                        href="support.html">Support</a></nav>
+                <div class="account-card"><span
+                        class="avatar">N</span><span><strong
+                            data-user-name>Name</strong><span>Customer</span></span></div>
+            </aside>
+            <main class="main">
+                <header class="topbar">
+                    <div>
+                        <h1 class="page-title">Manage profile</h1>
+                        <p class="page-subtitle">Welcome back. Here's what's
+                            happening today.</p>
+                    </div>
+                </header>
+                <div class="content">
+                    <section class="card profile-head"><span
+                            class="profile-avatar"></span>
+                        <div class="profile-meta">
+                            <h2 data-profile-title>Name</h2>
+                            <p data-profile-email>email@example.com</p><span
+                                class="role-badge">Customer</span>
+                        </div><label class="btn subtle">Change photo<input
+                                type="file" accept="image/*" id="photo-input"
+                                hidden></label>
+                    </section>
+                    <div class="profile-layout">
+                        <aside class="card profile-menu">
+                            <h3>Profile settings</h3><button class="active"
+                                type="button">Personal information<span>Name,
+                                    email and phone</span></button><button
+                                type="button">Delivery addresses<span>Manage
+                                    saved addresses</span></button><button
+                                type="button">Password &amp; security<span>Keep
+                                    your account safe</span></button><button
+                                type="button">Notifications<span>Email and
+                                    order alerts</span></button>
+                        </aside>
+                        <section class="card profile-main">
+                            <h2>Personal information</h2>
+                            <p>Keep your contact details up to date.</p>
+                            <form id="profile-form" novalidate>
+                                <div class="form-grid">
+                                    <div class="field"><label
+                                            for="first-name">First
+                                            name</label><input id="first-name"
+                                            name="firstName"
+                                            placeholder="Enter your first name"
+                                            autocomplete="given-name"
+                                            data-profile-rule="name"
+                                            aria-describedby="first-name-error"
+                                            required><small
+                                            class="field-error"
+                                            id="first-name-error"
+                                            aria-live="polite"></small></div>
+                                    <div class="field"><label
+                                            for="last-name">Last
+                                            name</label><input id="last-name"
+                                            name="lastName"
+                                            placeholder="Enter your last name"
+                                            autocomplete="family-name"
+                                            data-profile-rule="name"
+                                            aria-describedby="last-name-error"
+                                            required><small
+                                            class="field-error"
+                                            id="last-name-error"
+                                            aria-live="polite"></small></div>
+                                    <div class="field"><label
+                                            for="profile-email-field">Email
+                                            address</label><input
+                                            id="profile-email-field"
+                                            type="email" name="email"
+                                            placeholder="you@example.com"
+                                            autocomplete="email"
+                                            data-profile-rule="email"
+                                            aria-describedby="profile-email-field-error"
+                                            required><small class="field-error"
+                                            id="profile-email-field-error"
+                                            aria-live="polite"></small></div>
+                                    <div class="field"><label
+                                            for="profile-phone">Phone
+                                            number</label><input
+                                            id="profile-phone" name="phone"
+                                            placeholder="01XXXXXXXXX"
+                                            autocomplete="tel"
+                                            inputmode="numeric" maxlength="11"
+                                            pattern="01[0-9]{9}"
+                                            data-profile-rule="phone"
+                                            aria-describedby="profile-phone-error"
+                                            required><small class="field-error"
+                                            id="profile-phone-error"
+                                            aria-live="polite"></small></div>
+                                    <div class="address-box"><button
+                                            type="button"
+                                            id="edit-address">Edit</button><strong>Default
+                                            delivery address</strong><span
+                                            id="address-value">Dhaka 1209,
+                                            Bangladesh</span><input
+                                            id="address-input" hidden
+                                            value="Dhaka 1209, Bangladesh"></div>
+                                </div>
+                                <div class="save-row">
+                                    <p>Account created<strong>Month
+                                            Year</strong></p><button class="btn"
+                                        type="submit">Save
+                                        changes</button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="notice" role="status"></div>
+        <script src="customer.js"></script>
+    </body>
+
+</html>

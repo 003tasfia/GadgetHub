@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GadgetHub | Support</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="customer.css">
+</head>
+
+<body data-page="support">
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark"><img src="assets/favicon.ico"
+                        alt="GadgetHub icon"></span><span><span class="brand-name">GadgetHub</span><br><span
+                        class="brand-tagline">SMARTER SHOPPING</span></span></a>
+            <p class="nav-caption">CUSTOMER</p>
+            <nav class="side-nav"><a class="nav-link" data-nav="overview" href="index.html">Overview</a><a
+                    class="nav-link" data-nav="products" href="products.html">Browse products</a><a class="nav-link"
+                    data-nav="cart" href="cart.html">My cart <span class="cart-count"></span></a><a class="nav-link"
+                    data-nav="orders" href="orders.html">Order history</a><a class="nav-link" data-nav="status"
+                    href="order-status.html">Order status</a><a class="nav-link" data-nav="profile"
+                    href="profile.html">Manage profile</a><a class="nav-link" data-nav="support"
+                    href="support.html">Support</a></nav>
+            <div class="account-card"><span class="avatar">N</span><span><strong
+                        data-user-name>Name</strong><span>Customer</span></span></div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <h1 class="page-title">Support</h1>
+                    <p class="page-subtitle">Welcome back. Here's what's happening today.</p>
+                </div>
+            </header>
+            <div class="content">
+                <section class="support-hero">
+                    <h2>How can we help you today?</h2>
+                </section>
+                <div class="support-grid">
+                    <section class="card support-card">
+                        <h2>Contact support</h2>
+                        <p>Send us a message and we'll get back to you.</p>
+                        <form id="support-form">
+                            <div class="field"><label for="topic">Topic</label><select id="topic" required>
+                                    <option value="">Choose a topic</option>
+                                    <option>Delivery update</option>
+                                    <option>Product question</option>
+                                    <option>Payment issue</option>
+                                    <option>Return or refund</option>
+                                </select></div>
+                            <div class="field" style="margin-top:17px"><label
+                                    for="support-message">Message</label><textarea id="support-message" required
+                                    placeholder="Describe how we can help..."></textarea></div><button class="btn"
+                                type="submit">Send message</button>
+                        </form>
+                    </section>
+                    <section class="card support-card">
+                        <h2>Your recent support requests</h2>
+                        <p>Follow up on an existing conversation.</p>
+                        <div id="tickets">
+                            <article class="ticket">
+                                <div><strong>#SUP-1048 · Delivery update</strong>
+                                    <p>Last update: Oct 22, 2026</p>
+                                </div><span class="status">In progress</span>
+                            </article>
+                            <article class="ticket">
+                                <div><strong>#SUP-1031 · Product question</strong>
+                                    <p>Last update: Oct 18, 2026</p>
+                                </div><span class="status resolved">Resolved</span>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="notice" role="status"></div>
+    <script src="customer.js"></script>
+</body>
+
+</html>

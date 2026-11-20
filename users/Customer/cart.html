@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GadgetHub | My cart</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="customer.css">
+</head>
+
+<body data-page="cart">
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark"><img src="assets/favicon.ico"
+                        alt="GadgetHub icon"></span><span><span class="brand-name">GadgetHub</span><br><span
+                        class="brand-tagline">SMARTER SHOPPING</span></span></a>
+            <p class="nav-caption">CUSTOMER</p>
+            <nav class="side-nav"><a class="nav-link" data-nav="overview" href="index.html">Overview</a><a
+                    class="nav-link" data-nav="products" href="products.html">Browse products</a><a class="nav-link"
+                    data-nav="cart" href="cart.html">My cart <span class="cart-count"></span></a><a class="nav-link"
+                    data-nav="orders" href="orders.html">Order history</a><a class="nav-link" data-nav="status"
+                    href="order-status.html">Order status</a><a class="nav-link" data-nav="profile"
+                    href="profile.html">Manage profile</a><a class="nav-link" data-nav="support"
+                    href="support.html">Support</a></nav>
+            <div class="account-card"><span class="avatar">N</span><span><strong
+                        data-user-name>Name</strong><span>Customer</span></span></div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <h1 class="page-title">My cart</h1>
+                    <p class="page-subtitle">Welcome back. Here's what's happening today.</p>
+                </div>
+            </header>
+            <div class="content">
+                <p class="intro">Review your items before checkout.</p>
+                <div class="section-heading">
+                    <h2>Your cart <span class="role-badge cart-items-label">3 items</span></h2>
+                </div>
+                <div class="cart-layout">
+                    <section class="cart-items" id="cart-items"></section>
+                    <aside class="card summary" id="cart-summary"></aside>
+                </div>
+                <div class="section-heading">
+                    <h2>You might also like</h2>
+                </div>
+                <section class="also-grid">
+                    <article class="card compact-product">
+                        <div class="product-image yellow"><img src="assets/products/airpods4.jpg" alt="Apple AirPods 4"></div>
+                        <div class="product-info"><span class="product-name">Apple AirPods 4</span><span
+                                class="product-category">Audio</span><span class="price">৳ 19,990</span></div>
+                        <div class="product-bottom"><button class="btn small subtle add-cart" data-id="airpods4">Add to
+                                cart</button></div>
+                    </article>
+                    <article class="card compact-product">
+                        <div class="product-image blue"><img src="assets/products/power.jpg" alt="UGREEN Nexode 65W"></div>
+                        <div class="product-info"><span class="product-name">UGREEN Nexode 65W</span><span
+                                class="product-category">Accessories</span><span class="price">৳ 4,990</span></div>
+                        <div class="product-bottom"><button class="btn small subtle add-cart" data-id="power">Add to
+                                cart</button></div>
+                    </article>
+                    <article class="card compact-product">
+                        <div class="product-image pink"><img src="assets/products/keyboard.jpg" alt="Logitech K380s"></div>
+                        <div class="product-info"><span class="product-name">Logitech K380s</span><span
+                                class="product-category">Accessories</span><span class="price">৳ 4,990</span></div>
+                        <div class="product-bottom"><button class="btn small subtle add-cart" data-id="keyboard">Add to
+                                cart</button></div>
+                    </article>
+                </section>
+            </div>
+        </main>
+    </div>
+    <div class="notice" role="status"></div>
+    <script src="customer.js"></script>]
