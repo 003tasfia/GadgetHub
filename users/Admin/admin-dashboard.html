@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin dashboard - GadgetHub Admin</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../assets/Adminstyle.css">
+</head>
+<body>
+  <div class="layout">
+
+    <div class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="../../images/android-chrome-192x192.png" alt="GadgetHub logo">
+        <div>
+          <div class="brand-name">GadgetHub</div>
+          <div class="brand-tag">SMARTER SHOPPING</div>
+        </div>
+      </div>
+
+      <div class="menu-label">ADMIN</div>
+      <div class="menu">
+        <a href="admin-dashboard.html" class="active">Overview</a>
+        <a href="user-accounts.html">User accounts</a>
+        <a href="products.html">Products</a>
+        <a href="complaints.html">Customer Complaints</a>
+        <a href="sales-report.html">Sales reports</a>
+        <a href="profit-loss.html">Profit &amp; loss</a>
+        <a href="audit-logs.html">Audit logs</a>
+        <a href="#">Manage profile</a>
+      </div>
+
+      <div class="logout">
+        <a href="login.html">Logout</a>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="avatar"></div>
+        <div>
+          <div class="user-name">Name</div>
+          <div class="user-role">Admin</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="page-header">
+        <h1>Admin dashboard</h1>
+        <p>Welcome back. Here's what's happening today.</p>
+      </div>
+
+      <div class="content">
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-icon"></div>
+            <div class="stat-label">Total revenue</div>
+            <div class="stat-value">৳ 8.42M</div>
+            
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"></div>
+            <div class="stat-label">Total orders</div>
+            <div class="stat-value">2,846</div>
+            
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"></div>
+            <div class="stat-label">Active users</div>
+            <div class="stat-value">12,408</div>
+            
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"></div>
+            <div class="stat-label">Products listed</div>
+            <div class="stat-value">1,284</div>
+            
+          </div>
+        </div>
+        <div class="card chart-card">
+          <div class="section-title">Revenue overview</div>
+          <div class="section-sub">Monthly sales performance</div>
+        </div>
+
+        <div class="section-title" style="margin-bottom:10px;">Recent audit activity</div>
+        <table>
+          <tr><th>Time</th><th>User</th><th>Action</th><th>Resource</th><th>Result</th></tr>
+            <tr>
+              <td class="bold">10:42 AM</td>
+              <td>salesman@gadgethub.com</td>
+              <td>Updated product price</td>
+              <td>Nova X Pro</td>
+              <td><span class="badge green">Success</span></td>
+            </tr>
+            <tr>
+              <td class="bold">10:18 AM</td>
+              <td>manager@gadgethub.com</td>
+              <td>Changed order status</td>
+              <td>GH-20480</td>
+              <td><span class="badge green">Success</span></td>
+            </tr>
+            <tr>
+              <td class="bold">09:55 AM</td>
+              <td>salesman@gadgethub.com</td>
+              <td>Updated inventory</td>
+              <td>Studio Buds</td>
+              <td><span class="badge green">Success</span></td>
+            </tr>
+        </table>
+        <div style="text-align:right; margin-top:16px;"><a class="link" href="audit-logs.html">Show All</a></div>
+      </div>
+    </div>
+
+  </div>
+ <script src="../../assets/Adminscript.js"></script>
+</body>
+</html>

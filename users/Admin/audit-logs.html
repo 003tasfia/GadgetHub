@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit Logs - GadgetHub Admin</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../assets/Adminstyle.css">
+</head>
+<body>
+  <div class="layout">
+
+    <div class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="../../images/android-chrome-192x192.png" alt="GadgetHub logo">
+        <div>
+          <div class="brand-name">GadgetHub</div>
+          <div class="brand-tag">SMARTER SHOPPING</div>
+        </div>
+      </div>
+
+      <div class="menu-label">ADMIN</div>
+      <div class="menu">
+        <a href="admin-dashboard.html">Overview</a>
+        <a href="user-accounts.html">User accounts</a>
+        <a href="products.html">Products</a>
+        <a href="complaints.html">Customer Complaints</a>
+        <a href="sales-report.html">Sales reports</a>
+        <a href="profit-loss.html">Profit &amp; loss</a>
+        <a href="audit-logs.html" class="active">Audit logs</a>
+        <a href="#">Manage profile</a>
+      </div>
+
+      <div class="logout">
+        <a href="login.html">Logout</a>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="avatar"></div>
+        <div>
+          <div class="user-name">Name</div>
+          <div class="user-role">Admin</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="page-header">
+        <h1>Audit Logs</h1>
+        <p>Welcome back. Manage your GadgetHub store from one place.</p>
+      </div>
+
+      <div class="content">
+        <div class="stats">
+          <div class="stat-card">
+            
+            <div class="stat-label">Events this month</div>
+            <div class="stat-value">1,482</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Admin actions today</div>
+            <div class="stat-value">6</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Failed sign-ins</div>
+            <div class="stat-value">2</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Critical alerts</div>
+            <div class="stat-value">0</div>
+            
+          </div>
+        </div>
+        <div class="section-head">
+          <div>
+            <div class="section-title">Activity history</div>
+            <div class="section-sub">Audit records are read-only and should not be edited or deleted.</div>
+          </div>
+          <button class="btn btn-light">Export logs</button>
+        </div>
+
+        <div class="filter-bar">
+          <input type="text" id="search" placeholder="Search user, action or record ID" oninput="filterTable('audit-table','search',[['actor-filter',1],['result-filter',5]])">
+          <select id="actor-filter" onchange="filterTable('audit-table','search',[['actor-filter',1],['result-filter',5]])">
+            <option value="All">Actor: All</option>
+            <option value="Alex Morgan">Alex Morgan</option>
+            <option value="Jordan Lee">Jordan Lee</option>
+            <option value="Tanvir Ahmed">Tanvir Ahmed</option>
+            <option value="System">System</option>
+          </select>
+          <select id="result-filter" onchange="filterTable('audit-table','search',[['actor-filter',1],['result-filter',5]])">
+            <option value="All">Result: All</option>
+            <option value="Success">Success</option>
+            <option value="Blocked">Blocked</option>
+          </select>
+          <span style="font-size:12px; font-weight:600;">Date: Last 30 days</span>
+        </div>
+
+        <table id="audit-table">
+          <tr><th>Timestamp</th><th>Actor</th><th>Action</th><th>Target</th><th>IP address</th><th>Result</th></tr>
+            <tr>
+              <td>Oct 23, 17:22:09</td>
+              <td class="bold">Alex Morgan</td>
+              <td>Updated account role</td>
+              <td><a class="link" href="#">USR-00129</a></td>
+              <td>192.168.1.24</td>
+              <td><span class="badge green">Success</span></td>
+            </tr>
+            <tr>
+              <td>Oct 23, 16:48:37</td>
+              <td class="bold">Jordan Lee</td>
+              <td>Updated product price</td>
+              <td><a class="link" href="#">PRD-10244</a></td>
+              <td>192.168.1.30</td>
+              <td><span class="badge green">Success</span></td>
+            </tr>
+            <tr>
+              <td>Oct 23, 16:21:03</td>
+              <td class="bold">System</td>
+              <td>Failed sign-in</td>
+              <td><a class="link" href="#">USR-00041</a></td>
+              <td>203.0.113.18</td>
+              <td><span class="badge red">Blocked</span></td>
+            </tr>
+            <tr>
+              <td>Oct 23, 15:09:44</td>
+              <td class="bold">Alex Morgan</td>
+              <td>Exported sales report</td>
+              <td><a class="link" href="#">RPT-2026-10</a></td>
+              <td>192.168.1.24</td>
+              <td><span class="badge green">Success</span></td>
+            </tr>
+            <tr>
+              <td>Oct 23, 14:55:12</td>
+              <td class="bold">Tanvir Ahmed</td>
+              <td>Updated order status</td>
+              <td><a class="link" href="#">GH-20481</a></td>
+              <td>192.168.1.52</td>
+              <td><span class="badge green">Success</span></td>
+            </tr>
+            <tr>
+              <td>Oct 23, 12:32:55</td>
+              <td class="bold">Alex Morgan</td>
+              <td>Suspended account</td>
+              <td><a class="link" href="#">USR-00021</a></td>
+              <td>192.168.1.24</td>
+              <td><span class="badge green">Success</span></td>
+            </tr>
+            <tr>
+              <td>Oct 23, 10:11:07</td>
+              <td class="bold">System</td>
+              <td>Password reset requested</td>
+              <td><a class="link" href="#">USR-00093</a></td>
+              <td>203.0.113.12</td>
+              <td><span class="badge green">Success</span></td>
+            </tr>
+            <tr>
+              <td>Oct 23, 09:45:17</td>
+              <td class="bold">Jordan Lee</td>
+              <td>Added new product</td>
+              <td><a class="link" href="#">PRD-10102</a></td>
+              <td>192.168.1.30</td>
+              <td><span class="badge green">Success</span></td>
+            </tr>
+        </table>
+        <div class="table-foot">
+          <span>Showing 1–8 of 1,482 events</span>
+          <a class="link" href="#" onclick="loadMore(); return false;">Load more ↓</a>
+        </div>
+        <div class="msg" id="audit-msg"></div>
+      </div>
+    </div>
+
+  </div>
+  <script src="../../assets/Adminscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profit &amp; Loss - GadgetHub Admin</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../assets/Adminstyle.css">
+</head>
+<body>
+  <div class="layout">
+
+    <div class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="../../images/android-chrome-192x192.png" alt="GadgetHub logo">
+        <div>
+          <div class="brand-name">GadgetHub</div>
+          <div class="brand-tag">SMARTER SHOPPING</div>
+        </div>
+      </div>
+
+      <div class="menu-label">ADMIN</div>
+      <div class="menu">
+        <a href="admin-dashboard.html">Overview</a>
+        <a href="user-accounts.html">User accounts</a>
+        <a href="products.html">Products</a>
+        <a href="complaints.html">Customer Complaints</a>
+        <a href="sales-report.html">Sales reports</a>
+        <a href="profit-loss.html" class="active">Profit &amp; loss</a>
+        <a href="audit-logs.html">Audit logs</a>
+        <a href="#">Manage profile</a>
+      </div>
+
+      <div class="logout">
+        <a href="login.html">Logout</a>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="avatar"></div>
+        <div>
+          <div class="user-name">Name</div>
+          <div class="user-role">Admin</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="page-header">
+        <h1>Profit &amp; Loss</h1>
+        <p>Welcome back. Manage your GadgetHub store from one place.</p>
+      </div>
+
+      <div class="content">
+        <div class="date-bar">
+          <label>Reporting period</label>
+          <input type="date" id="from-date" value="2026-10-01">
+          <span>to</span>
+          <input type="date" id="to-date" value="2026-10-23">
+          <button class="btn btn-primary" onclick="applyDates()">Apply</button>
+          <span class="right">Currency: BDT (৳)</span>
+        </div>
+        <div class="msg" id="date-msg"></div>
+        <div class="stats">
+          <div class="stat-card">
+            
+            <div class="stat-label">Total revenue</div>
+            <div class="stat-value">৳ 2,48,650</div>
+            <div class="stat-note">From completed sales</div>
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Cost of goods sold</div>
+            <div class="stat-value">৳ 1,61,300</div>
+            <div class="stat-note">Product purchase cost</div>
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Gross profit</div>
+            <div class="stat-value green">৳ 87,350</div>
+            <div class="stat-note">Revenue − product cost</div>
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Net profit</div>
+            <div class="stat-value green">৳ 62,850</div>
+            <div class="stat-note">After operating expenses</div>
+          </div>
+        </div>
+        <div class="card" style="width:60%; margin-bottom:26px;">
+          <div class="section-title">Profit trend</div>
+          <div class="section-sub">Revenue and net profit by week</div>
+          <div class="chart-lines">
+            <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+          </div>
+        </div>
+
+        <div class="section-title" style="margin-bottom:8px;">Financial summary</div>
+        <table>
+          <tr><th>Metric</th><th>Amount</th><th>Calculation</th><th>Notes</th></tr>
+            <tr>
+              <td>Revenue</td>
+              <td class="bold">৳ 2,48,650</td>
+              <td>Completed order totals</td>
+              <td>Before returns</td>
+            </tr>
+            <tr>
+              <td>Cost of goods sold</td>
+              <td class="bold">৳ 1,61,300</td>
+              <td>Inventory cost</td>
+              <td>Recorded costs</td>
+            </tr>
+            <tr>
+              <td class="bold">Gross profit</td>
+              <td class="bold">৳ 87,350</td>
+              <td>Revenue − COGS</td>
+              <td>35.1% margin</td>
+            </tr>
+            <tr>
+              <td>Operating expenses</td>
+              <td class="bold">৳ 24,500</td>
+              <td>Operating costs</td>
+              <td>Period costs</td>
+            </tr>
+            <tr>
+              <td class="bold">Net profit</td>
+              <td class="bold">৳ 62,850</td>
+              <td>Gross profit − expenses</td>
+              <td>25.3% margin</td>
+            </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <script src="../../assets/Adminscript.js"></script>
+</body>
+</html>

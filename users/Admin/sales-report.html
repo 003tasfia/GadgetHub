@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Report - GadgetHub Admin</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../assets/Adminstyle.css">
+</head>
+<body>
+  <div class="layout">
+
+    <div class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="../../images/android-chrome-192x192.png" alt="GadgetHub logo">
+        <div>
+          <div class="brand-name">GadgetHub</div>
+          <div class="brand-tag">SMARTER SHOPPING</div>
+        </div>
+      </div>
+
+      <div class="menu-label">ADMIN</div>
+      <div class="menu">
+        <a href="admin-dashboard.html">Overview</a>
+        <a href="user-accounts.html">User accounts</a>
+        <a href="products.html">Products</a>
+        <a href="complaints.html">Customer Complaints</a>
+        <a href="sales-report.html" class="active">Sales reports</a>
+        <a href="profit-loss.html">Profit &amp; loss</a>
+        <a href="audit-logs.html">Audit logs</a>
+        <a href="#">Manage profile</a>
+      </div>
+
+      <div class="logout">
+        <a href="login.html">Logout</a>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="avatar"></div>
+        <div>
+          <div class="user-name">Name</div>
+          <div class="user-role">Admin</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="page-header">
+        <h1>Sales Report</h1>
+        <p>Welcome back. Manage your GadgetHub store from one place.</p>
+      </div>
+
+      <div class="content">
+        <div class="date-bar">
+          <label>Date range</label>
+          <input type="date" id="from-date" value="2026-10-01">
+          <span>to</span>
+          <input type="date" id="to-date" value="2026-10-23">
+          <button class="btn btn-primary" onclick="applyDates()">Apply</button>
+        </div>
+        <div class="msg" id="date-msg"></div>
+        <div class="stats">
+          <div class="stat-card">
+            
+            <div class="stat-label">Gross sales</div>
+            <div class="stat-value">৳ 2,48,650</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Orders</div>
+            <div class="stat-value">248</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Average order value</div>
+            <div class="stat-value">৳ 1,002</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Payment success</div>
+            <div class="stat-value">92.4%</div>
+            
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="card wide">
+            <div class="section-title">Sales over time</div>
+            <div class="section-sub">Daily gross sales · BDT</div>
+            <div class="chart-lines">
+              <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+              <div class="x-labels"><span>Oct 20</span><span>Oct 23</span></div>
+            </div>
+          </div>
+          <div class="card narrow">
+            <div class="section-title">Sales by category</div>
+            <ul class="category-list">
+              <li>Smartphones</li><li>Laptops</li><li>Audio</li><li>Wearables</li><li>Other</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-title" style="margin-bottom:8px;">Recent sales</div>
+          <table>
+            <tr><th>Order ID</th><th>Customer</th><th>Date</th><th>Payment</th><th>Total</th><th>Status</th></tr>
+            <tr>
+              <td class="bold">GH-20481</td>
+              <td>M. Rahman</td>
+              <td>Oct 23, 2026</td>
+              <td>Card</td>
+              <td>৳ 64,990</td>
+              <td><span class="badge green">Paid</span></td>
+            </tr>
+            <tr>
+              <td class="bold">GH-20480</td>
+              <td>S. Ahmed</td>
+              <td>Oct 23, 2026</td>
+              <td>bKash</td>
+              <td>৳ 8,490</td>
+              <td><span class="badge green">Paid</span></td>
+            </tr>
+            <tr>
+              <td class="bold">GH-20479</td>
+              <td>N. Islam</td>
+              <td>Oct 22, 2026</td>
+              <td>COD</td>
+              <td>৳ 12,990</td>
+              <td><span class="badge yellow">Pending</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="../../assets/Adminscript.js"></script>
+</body>
+</html>

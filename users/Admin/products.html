@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - GadgetHub Admin</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../assets/Adminstyle.css">
+</head>
+<body>
+  <div class="layout">
+
+    <div class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="../../images/android-chrome-192x192.png" alt="GadgetHub logo">
+        <div>
+          <div class="brand-name">GadgetHub</div>
+          <div class="brand-tag">SMARTER SHOPPING</div>
+        </div>
+      </div>
+
+      <div class="menu-label">ADMIN</div>
+      <div class="menu">
+        <a href="admin-dashboard.html">Overview</a>
+        <a href="user-accounts.html">User accounts</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="complaints.html">Customer Complaints</a>
+        <a href="sales-report.html">Sales reports</a>
+        <a href="profit-loss.html">Profit &amp; loss</a>
+        <a href="audit-logs.html">Audit logs</a>
+        <a href="#">Manage profile</a>
+      </div>
+
+      <div class="logout">
+        <a href="login.html">Logout</a>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="avatar"></div>
+        <div>
+          <div class="user-name">Name</div>
+          <div class="user-role">Admin</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="page-header">
+        <h1>Products</h1>
+        <p>Welcome back. Manage your GadgetHub store from one place.</p>
+      </div>
+
+      <div class="content">
+        <div class="stats">
+          <div class="stat-card">
+            
+            <div class="stat-label">Total products</div>
+            <div class="stat-value">86</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">In stock</div>
+            <div class="stat-value">72</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Low stock</div>
+            <div class="stat-value">7</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Out of stock</div>
+            <div class="stat-value">7</div>
+            
+          </div>
+        </div>
+        <div class="section-title" style="margin-bottom:12px;">Product catalogue</div>
+        <div class="filter-bar">
+          <input type="text" id="search" placeholder="Search product name or ID" oninput="filterTable('product-table','search',[['cat-filter',1]])">
+          <select id="cat-filter" onchange="filterTable('product-table','search',[['cat-filter',1]])">
+            <option value="All">Category: All</option>
+            <option value="Smartphones">Smartphones</option>
+            <option value="Laptops">Laptops</option>
+            <option value="Audio">Audio</option>
+            <option value="Wearables">Wearables</option>
+            <option value="Tablets">Tablets</option>
+            <option value="Accessories">Accessories</option>
+          </select>
+        </div>
+
+        <table id="product-table">
+          <tr><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th>Updated</th></tr>
+            <tr>
+              <td class="bold">Nova X Pro</td>
+              <td>Smartphones</td>
+              <td class="bold">৳ 54,990</td>
+              <td>42</td>
+              <td><span class="badge green">In stock</span></td>
+              <td>Oct 22, 2026</td>
+            </tr>
+            <tr>
+              <td class="bold">Aerobook 14</td>
+              <td>Laptops</td>
+              <td class="bold">৳ 112,500</td>
+              <td>3</td>
+              <td><span class="badge yellow">Low stock</span></td>
+              <td>Oct 22, 2026</td>
+            </tr>
+            <tr>
+              <td class="bold">Studio Buds</td>
+              <td>Audio</td>
+              <td class="bold">৳ 8,490</td>
+              <td>0</td>
+              <td><span class="badge red">Out of stock</span></td>
+              <td>Oct 22, 2026</td>
+            </tr>
+            <tr>
+              <td class="bold">Pulse Watch</td>
+              <td>Wearables</td>
+              <td class="bold">৳ 12,990</td>
+              <td>19</td>
+              <td><span class="badge green">In stock</span></td>
+              <td>Oct 22, 2026</td>
+            </tr>
+            <tr>
+              <td class="bold">Tab Air 11</td>
+              <td>Tablets</td>
+              <td class="bold">৳ 39,900</td>
+              <td>9</td>
+              <td><span class="badge green">In stock</span></td>
+              <td>Oct 22, 2026</td>
+            </tr>
+            <tr>
+              <td class="bold">PowerBank 20K</td>
+              <td>Accessories</td>
+              <td class="bold">৳ 3,250</td>
+              <td>2</td>
+              <td><span class="badge yellow">Low stock</span></td>
+              <td>Oct 22, 2026</td>
+            </tr>
+        </table>
+        <div class="table-foot">
+          <span>Showing 1–6 of 86 products</span>
+          <a class="link" href="#">Show All</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="../../assets/Adminscript.js"></script>
+</body>
+</html>

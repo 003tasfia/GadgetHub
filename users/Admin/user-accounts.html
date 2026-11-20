@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Accounts - GadgetHub Admin</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../assets/Adminstyle.css">
+</head>
+<body>
+  <div class="layout">
+
+    <div class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="../../images/android-chrome-192x192.png" alt="GadgetHub logo">
+        <div>
+          <div class="brand-name">GadgetHub</div>
+          <div class="brand-tag">SMARTER SHOPPING</div>
+        </div>
+      </div>
+
+      <div class="menu-label">ADMIN</div>
+      <div class="menu">
+        <a href="admin-dashboard.html">Overview</a>
+        <a href="user-accounts.html" class="active">User accounts</a>
+        <a href="products.html">Products</a>
+        <a href="complaints.html">Customer Complaints</a>
+        <a href="sales-report.html">Sales reports</a>
+        <a href="profit-loss.html">Profit &amp; loss</a>
+        <a href="audit-logs.html">Audit logs</a>
+        <a href="#">Manage profile</a>
+      </div>
+
+      <div class="logout">
+        <a href="login.html">Logout</a>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="avatar"></div>
+        <div>
+          <div class="user-name">Name</div>
+          <div class="user-role">Admin</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="page-header">
+        <h1>User Accounts</h1>
+        <p>Welcome back. Manage your GadgetHub store from one place.</p>
+      </div>
+
+      <div class="content">
+        <div class="stats">
+          <div class="stat-card">
+            
+            <div class="stat-label">Customers</div>
+            <div class="stat-value">1,248</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Managers</div>
+            <div class="stat-value">12</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Salesmen</div>
+            <div class="stat-value">34</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Pending review</div>
+            <div class="stat-value">18</div>
+            
+          </div>
+        </div>
+        <div class="section-head">
+          <div>
+            <div class="section-title">All user accounts</div>
+            <div class="section-sub">Manage access, roles and account status.</div>
+          </div>
+          <a class="btn btn-primary" href="create-edit-account.html">+ Create account</a>
+        </div>
+
+        <div class="filter-bar">
+          <input type="text" id="search" placeholder="Search name, email or ID" oninput="filterTable('user-table','search',[['role-filter',2],['status-filter',4]])">
+          <select id="role-filter" onchange="filterTable('user-table','search',[['role-filter',2],['status-filter',4]])">
+            <option value="All">Role: All</option>
+            <option value="Customer">Customer</option>
+            <option value="Manager">Manager</option>
+            <option value="Salesman">Salesman</option>
+          </select>
+          <select id="status-filter" onchange="filterTable('user-table','search',[['role-filter',2],['status-filter',4]])">
+            <option value="All">Status: All</option>
+            <option value="Active">Active</option>
+            <option value="Suspended">Suspended</option>
+          </select>
+        </div>
+
+        <table id="user-table">
+          <tr><th>User</th><th>Email</th><th>Role</th><th>Joined</th><th>Status</th><th>Actions</th></tr>
+            <tr>
+              <td class="bold">Maliha Rahman</td>
+              <td>maliha.r@example.com</td>
+              <td><span class="badge purple">Customer</span></td>
+              <td>Oct 20, 2026</td>
+              <td><span class="badge green">Active</span></td>
+              <td><a class="link" href="create-edit-account.html">Edit</a></td>
+            </tr>
+            <tr>
+              <td class="bold">Tanvir Ahmed</td>
+              <td>tanvir.a@example.com</td>
+              <td><span class="badge purple">Manager</span></td>
+              <td>Sep 12, 2026</td>
+              <td><span class="badge green">Active</span></td>
+              <td><a class="link" href="create-edit-account.html">Edit</a></td>
+            </tr>
+            <tr>
+              <td class="bold">Nabil Islam</td>
+              <td>nabil.i@example.com</td>
+              <td><span class="badge purple">Salesman</span></td>
+              <td>Aug 04, 2026</td>
+              <td><span class="badge green">Active</span></td>
+              <td><a class="link" href="create-edit-account.html">Edit</a></td>
+            </tr>
+            <tr>
+              <td class="bold">Sadia Khan</td>
+              <td>sadia.k@example.com</td>
+              <td><span class="badge purple">Customer</span></td>
+              <td>Jul 28, 2026</td>
+              <td><span class="badge red">Suspended</span></td>
+              <td><a class="link" href="create-edit-account.html">Edit</a></td>
+            </tr>
+        </table>
+        <div class="table-foot">
+          <span>Showing 1–4 of 1,294 accounts</span>
+          <a class="link" href="#">Show All</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="../../assets/Adminscript.js"></script>
+</body>
+</html>

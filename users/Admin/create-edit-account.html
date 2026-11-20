@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create / Edit Account - GadgetHub Admin</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../assets/Adminstyle.css">
+</head>
+<body>
+  <div class="layout">
+
+    <div class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="../../images/android-chrome-192x192.png" alt="GadgetHub logo">
+        <div>
+          <div class="brand-name">GadgetHub</div>
+          <div class="brand-tag">SMARTER SHOPPING</div>
+        </div>
+      </div>
+
+      <div class="menu-label">ADMIN</div>
+      <div class="menu">
+        <a href="admin-dashboard.html">Overview</a>
+        <a href="user-accounts.html" class="active">User accounts</a>
+        <a href="products.html">Products</a>
+        <a href="complaints.html">Customer Complaints</a>
+        <a href="sales-report.html">Sales reports</a>
+        <a href="profit-loss.html">Profit &amp; loss</a>
+        <a href="audit-logs.html">Audit logs</a>
+        <a href="#">Manage profile</a>
+      </div>
+
+      <div class="logout">
+        <a href="login.html">Logout</a>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="avatar"></div>
+        <div>
+          <div class="user-name">Name</div>
+          <div class="user-role">Admin</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="page-header">
+        <h1>Create / Edit Account</h1>
+        <p>Welcome back. Manage your GadgetHub store from one place.</p>
+      </div>
+
+      <div class="content">
+        <div class="card form-card">
+          <div class="section-title">Account details</div>
+          <div class="section-sub">Complete the profile and access settings.</div>
+
+          <form id="account-form" onsubmit="return validateAccount()">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullname">Full name *</label>
+                <input type="text" id="fullname" value="Maliha Rahman">
+                <div class="field-error" id="err-name"></div>
+              </div>
+              <div class="form-group">
+                <label for="accid">Account ID</label>
+                <input type="text" id="accid" value="USR-001294" readonly>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email address *</label>
+                <input type="text" id="email" value="maliha.r@example.com">
+                <div class="field-error" id="err-email"></div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="text" id="phone" placeholder="+880 1XXX-XXXXXX">
+                <div class="field-error" id="err-phone"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="role">Account role *</label>
+              <select id="role">
+                <option value="">Select role</option>
+                <option value="Customer" selected>Customer</option>
+                <option value="Manager">Manager</option>
+                <option value="Salesman">Salesman</option>
+              </select>
+              <div class="field-error" id="err-role"></div>
+            </div>
+
+            <div class="form-group">
+              <label>Account status</label>
+              <span class="badge green">Active</span>
+            </div>
+
+            <div class="msg" id="form-msg"></div>
+
+            <div class="form-actions">
+              <a class="btn btn-light" href="user-accounts.html">Cancel</a>
+              <button class="btn btn-primary" type="submit">Save account</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="../../assets/Adminscript.js"></script>
+</body>
+</html>

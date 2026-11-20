@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Complaints - GadgetHub Admin</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../assets/Adminstyle.css">
+</head>
+<body>
+  <div class="layout">
+
+    <div class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="../../images/android-chrome-192x192.png" alt="GadgetHub logo">
+        <div>
+          <div class="brand-name">GadgetHub</div>
+          <div class="brand-tag">SMARTER SHOPPING</div>
+        </div>
+      </div>
+
+      <div class="menu-label">ADMIN</div>
+      <div class="menu">
+        <a href="admin-dashboard.html">Overview</a>
+        <a href="user-accounts.html">User accounts</a>
+        <a href="products.html">Products</a>
+        <a href="complaints.html" class="active">Customer Complaints</a>
+        <a href="sales-report.html">Sales reports</a>
+        <a href="profit-loss.html">Profit &amp; loss</a>
+        <a href="audit-logs.html">Audit logs</a>
+        <a href="#">Manage profile</a>
+      </div>
+
+      <div class="logout">
+        <a href="login.html">Logout</a>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="avatar"></div>
+        <div>
+          <div class="user-name">Name</div>
+          <div class="user-role">Admin</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="page-header">
+        <h1>Customer Complaints</h1>
+        <p>Welcome back. Here's what's happening today.</p>
+      </div>
+
+      <div class="content">
+        <div class="stats">
+          <div class="stat-card">
+            
+            <div class="stat-label">Open complaints</div>
+            <div class="stat-value">18</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">In review</div>
+            <div class="stat-value">7</div>
+            
+          </div>
+          <div class="stat-card">
+            
+            <div class="stat-label">Resolved this month</div>
+            <div class="stat-value">42</div>
+            
+          </div>
+        </div>
+        <div class="filter-bar">
+          <input type="text" id="search" placeholder="Search complaint ID or customer" oninput="filterTable('complaint-table','search',[])">
+        </div>
+
+        <div class="section-title" style="margin-bottom:10px;">Customer complaints</div>
+        <table id="complaint-table">
+          <tr><th>Case ID</th><th>Customer</th><th>Subject</th><th>Date</th><th>Status</th></tr>
+            <tr class="clickable selected" data-detail="Customer reports the order is past its estimated delivery date." onclick="selectComplaint(this)">
+              <td class="bold">CP-1098</td>
+              <td>M. Rahman</td>
+              <td>Order delayed</td>
+              <td>Oct 22, 2026</td>
+              <td><span class="badge red">Open</span></td>
+            </tr>
+            <tr class="clickable" data-detail="Customer received the parcel with damaged packaging." onclick="selectComplaint(this)">
+              <td class="bold">CP-1097</td>
+              <td>E. Ahmed</td>
+              <td>Damaged packaging</td>
+              <td>Oct 22, 2026</td>
+              <td><span class="badge yellow">In review</span></td>
+            </tr>
+            <tr class="clickable" data-detail="Customer asks about a payment that was charged twice." onclick="selectComplaint(this)">
+              <td class="bold">CP-1094</td>
+              <td>N. Islam</td>
+              <td>Payment question</td>
+              <td>Oct 21, 2026</td>
+              <td><span class="badge red">Open</span></td>
+            </tr>
+            <tr class="clickable" data-detail="Customer received a different product from the one ordered." onclick="selectComplaint(this)">
+              <td class="bold">CP-1090</td>
+              <td>T. Hasan</td>
+              <td>Wrong item received</td>
+              <td>Oct 20, 2026</td>
+              <td><span class="badge yellow">In review</span></td>
+            </tr>
+            <tr class="clickable" data-detail="Customer is waiting for the refund of a returned item." onclick="selectComplaint(this)">
+              <td class="bold">CP-1086</td>
+              <td>F. Akter</td>
+              <td>Refund not received</td>
+              <td>Oct 19, 2026</td>
+              <td><span class="badge green">Resolved</span></td>
+            </tr>
+        </table>
+
+        <div class="card selected-box">
+          <div>
+            <div class="section-title" id="selected-title">Selected complaint · CP-1098</div>
+            <div class="section-sub" id="selected-text">Customer reports the order is past its estimated delivery date.</div>
+          </div>
+          <button class="btn btn-green" onclick="markResolved()">Mark resolved</button>
+        </div>
+        <div class="msg" id="complaint-msg" style="margin-top:10px;"></div>
+
+      </div>
+    </div>
+
+  </div>
+  <script src="../../assets/Adminscript.js"></script>
+</body>
+</html>

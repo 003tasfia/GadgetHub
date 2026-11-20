@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../assets/Adminstyle.css">
+    <link rel="icon" href="../../favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body id="loginbody">
+    <section id="loginleft">
+         <div id="logoname">
+            <img id="img" src="../../images/favicon-32x32.png" alt="logo">
+            <h3 id="loginname">GadgetHub</h3>
+        </div>
+        <div>
+            <h1 id="fav">Your next favorite<br>
+            <span id="bluespan">gadget is waiting.</span></h1>
+            <p id="explorelogin">Explore trusted tech essentials with a shopping<br>experience designed around you.</p>
+        </div>
+        <div>
+            <div id="emptydiv"></div>
+            <p id="loginfootp1">TECH THAT MOVES YOU</p>
+            <p id="loginfootp2">Everyday essentials</p>
+        </div>
+    </section>
+
+    <section id="loginright">
+        <div id="whitecardmanage">
+            <h2 id="cardtitlelogin">Create your account</h2>
+            <p id="cardtitleloginp">Join GadgetHub for smarter shopping</p>
+
+            <form onsubmit="return checkRegister()">
+                <label class="emailpasslogin" for="fname">Full name</label>
+                <input class="textpasslogin" type="text" id="fname" placeholder="Enter your name" required>
+                <br>
+                <label class="emailpasslogin" for="email">Email Address</label>
+                <input class="textpasslogin" type="email" id="email" placeholder="Enter your Email" required>
+                <br>
+                <label class="emailpasslogin" for="phone">Phone Number</label>
+                <input class="textpasslogin" type="tel" id="phone" placeholder="Enter your phone number" required> 
+                <br>
+                <label class="emailpasslogin" for="password">Password</label>
+                <input class="textpasslogin" type="password" id="password" placeholder="Enter your password" required>
+                <br>
+                <label class="emailpasslogin" for="confirmpass">Confirm Password</label>
+                <input class="textpasslogin" type="password" id="confirmpass" placeholder="Confirm password" required>
+                <br>
+                <div id="auth-msg"></div>
+                <input id="loginsubmit" type="submit" value="Create account">
+            </form>
+            <p id="newto">Already have an account?<br>
+            <a id="createaccount" href="login.html">Sign in</a>
+            </p>
+        </div>
+    </section>
+    <script src="../../assets/Adminscript.js"></script>
+</body>
+</html>
