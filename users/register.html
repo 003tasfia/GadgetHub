@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <script src="../assets/salesmanscript.js"></script>
 </head>
 <body id="loginbody">
     <section id="loginleft">
@@ -30,21 +31,26 @@
             <h2 id="cardtitlelogin">Create your account</h2>
             <p id="cardtitleloginp">Join GadgetHub for smarter shopping</p>
 
-            <form action="" method="post">
+            <form onsubmit="return formValidateRegister()" action="" method="post">
                 <label class="emailpasslogin" for="fname">Full name</label>
                 <input class="textpasslogin" type="text" id="fname" placeholder="Enter your name" required>
+                <span id="fnamespan" style="color:red; font-weight:bold;"></span>
                 <br>
                 <label class="emailpasslogin" for="email">Email Address</label>
                 <input class="textpasslogin" type="email" id="email" placeholder="Enter your Email" required>
+                <span id="emailspan" style="color:red; font-weight:bold;"></span>
                 <br>
                 <label class="emailpasslogin" for="phone">Phone Number</label>
                 <input class="textpasslogin" type="number" id="phone" placeholder="Enter your phone number" required> 
+                <span id="phonespan" style="color:red; font-weight:bold;"></span>
                 <br>
                 <label class="emailpasslogin" for="password">Password</label>
                 <input class="textpasslogin" type="password" id="password" placeholder="Enter your password" required>
+                <span id="strongpassspan" style="color:red; font-weight:bold;"></span>
                 <br>
                 <label class="emailpasslogin" for="confirmpass">Confirm Password</label>
                 <input class="textpasslogin" type="password" id="confirmpass" placeholder="Confirm password" required>
+                <span id="passspan" style="color:red; font-weight:bold;"></span>
                 <br>
                 <input id="loginsubmit" type="submit" value="Create account">
             </form>

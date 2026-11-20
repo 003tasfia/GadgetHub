@@ -13,6 +13,11 @@ a{
     text-decoration-line: none;
 }
 
+#pictures{
+    height: 100px;
+    width: 149px;
+}
+
 #left{
     width: 240px;
     background-color: #ffffff;

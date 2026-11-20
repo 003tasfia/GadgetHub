@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product</title>
+    <script src="../../assets/salesmanscript.js"></script>
 </head>
 <body id="salesbody">
     <section id="left">
@@ -58,28 +59,31 @@
                 </div>
 
                 <div>
-                    <form id="addform" method="post">
+                    <form onsubmit="return formValidateAdd()" id="addform" method="post">
                         <div id="namedes">
                         <label class="addlabel" for="productname">Products Name</label>
-                        <input class="addtext" type="text" id="productname">
+                        <input class="addtext" type="text" id="productname" required>
+                        <span id="productnamespan" style="color:red; font-weight:bold;"></span>
                         <label class="addlabel" for="description">Description</label>
-                        <textarea id="addtextarea" class="addtext" cols="30" rows="10"></textarea>
+                        <textarea id="addtextarea" class="addtext" cols="30" rows="10" required></textarea>
+                        <span id="textareaspan" style="color:red; font-weight:bold;"></span>
                         </div>
 
                         <div>
                         <label class="addlabel" for="category">Category</label>
-                        <input class="addtext" type="text" id="category">
+                        <input class="addtext" type="text" id="category" required>
                         <label class="addlabel" for="price">Selling Price (BDT)</label>
-                        <input class="addtext" type="number" id="price">
+                        <input class="addtext" type="number" id="price" required>
                         <label class="addlabel" for="stockquan">Stock Quantity</label>
-                        <input class="addtext" type="number" id="stockquan">
+                        <input class="addtext" type="number" id="stockquan" required>
                         </div>
 
                         <div>
                             <label class="addlabel" for="brand">Brand</label>
-                            <input class="addtext" type="text" id="band">
-                            <label class="addlabel" for="warranty">Warranty</label>
-                            <input class="addtext" type="number" id="warranty">
+                            <input class="addtext" type="text" id="band" required>
+                            <label class="addlabel" for="warranty">Warranty(Months)</label>
+                            <input class="addtext" type="number" id="warranty" required>
+                            <span id="warrantyspan" style="color:red; font-weight:bold;"></span>
                         </div>
 
                             <label class="addlabel" for="productimg">Product Image</label>
@@ -90,7 +94,7 @@
                                      <div id="upload-note">PNG or JPG.</div>
                                  </span>
                             </label>
-                            <input type="file" id="image" hidden>
+                            <input type="file" id="image" accept="image/png, image/jpeg" hidden required>
 
                         <div id="addsubmit">
                             <input id="addsubmitbutton" type="submit" value="Add Product">

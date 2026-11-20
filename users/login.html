@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <script src="../assets/salesmanscript.js"></script>
 </head>
 <body id="loginbody">
     <section id="loginleft">
@@ -30,9 +31,10 @@
             <h2 id="cardtitlelogin">Welcome back</h2>
             <p id="cardtitleloginp">Sign in to continue to your GadgetHub account.</p>
 
-            <form action="" method="post">
+            <form onsubmit="return formValidateLogin()" action="" method="post">
                 <label class="emailpasslogin" for="email">Email</label>
                 <input class="textpasslogin" type="text" id="email" placeholder="Enter your email">
+                <span id="emailspan" style="color:red; font-weight:bold;"></span>
                 <br>
                 <label class="emailpasslogin" for="password">Password</label>
                 <input class="textpasslogin" type="password" id="password" placeholder="Enter your password">
