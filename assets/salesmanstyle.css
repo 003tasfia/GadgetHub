@@ -67,10 +67,6 @@ a{
     margin: 24px 0 16px 7px;
 }
 
-#navi{
-    flex: 1;
-}
-
 nav{
     display: flex;
     flex-direction: column;
